@@ -10,7 +10,7 @@ node {
 	}
 
 	stage('Push image') {
-		withDockerRegistry([ credentialsId: "dockerHub", url: "" ]) {
+		withDockerRegistry([ credentialsId: "dockerHub", url: "https://github.com/hannahmaina/ELKExample.git" ]) {
 		app.push()
 		app.push("latest")
 	}
